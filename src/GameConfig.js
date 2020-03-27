@@ -2,6 +2,7 @@
 import GameRoot from "./scripts/GameRoot"
 import AutoMove from "./scripts/AutoMove"
 import RepeatBg from "./scripts/RepeatBg"
+import BirdCtrl from "./scripts/BirdCtrl"
 
 export default class GameConfig {
     static init() {
@@ -10,6 +11,7 @@ export default class GameConfig {
 		reg("scripts/GameRoot.js",GameRoot);
 		reg("scripts/AutoMove.js",AutoMove);
 		reg("scripts/RepeatBg.js",RepeatBg);
+		reg("scripts/BirdCtrl.js",BirdCtrl);
     }
 }
 GameConfig.width = 1920;
