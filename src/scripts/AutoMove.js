@@ -14,7 +14,9 @@ export default class AutoMove extends Laya.Script {
     }
 
     onAwake() {
-        console.log(this.owner);
         this.owner.getComponent(Laya.RigidBody).linearVelocity = {x:-this.moveSpeed, y:0};
+        Laya.stage.on("GameOver",this,function(){
+            this.owner.getComponent(Laya.RigidBody).linearVelocity = {x:0, y:0};
+        })
     }
 }

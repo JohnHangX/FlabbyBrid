@@ -5,11 +5,11 @@
     "searchKey":"View",
     "props":{"sceneWidth":600,"sceneHeight":400,"sceneColor":"#000000"},
     "nodeParent":-1,
-    "maxID":3,
+    "maxID":6,
     "label":"View",
-    "isDirectory":false,
+    "isDirectory":true,
     "isAniNode":true,
-    "hasChild":false,
+    "hasChild":true,
     "compId":2,
     "child":[
         {
@@ -91,6 +91,12 @@
                     "keyframes":{
 
                     }
+                },
+                {
+                    "target":5,
+                    "keyframes":{
+
+                    }
                 }],
             "name":"Idle",
             "id":1,
@@ -114,8 +120,18 @@
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":4,
+                                "label":null,
                                 "key":"y",
                                 "index":0
+                            },
+                            {
+                                "value":-64,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":4,
+                                "label":null,
+                                "key":"y",
+                                "index":1
                             }],
                         "x":[
                             {
@@ -123,8 +139,18 @@
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":4,
+                                "label":null,
                                 "key":"x",
                                 "index":0
+                            },
+                            {
+                                "value":-64,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":4,
+                                "label":null,
+                                "key":"x",
+                                "index":1
                             }],
                         "skin":[
                             {
@@ -132,9 +158,25 @@
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
+                                "label":null,
                                 "key":"skin",
                                 "index":0
+                            },
+                            {
+                                "value":"res/images/BirdHero_02.png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "label":null,
+                                "key":"skin",
+                                "index":1
                             }]
+                    }
+                },
+                {
+                    "target":5,
+                    "keyframes":{
+
                     }
                 }],
             "name":"Fly",

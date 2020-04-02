@@ -3,6 +3,7 @@ import GameRoot from "./scripts/GameRoot"
 import AutoMove from "./scripts/AutoMove"
 import RepeatBg from "./scripts/RepeatBg"
 import BirdCtrl from "./scripts/BirdCtrl"
+import ColumnSpawn from "./scripts/ColumnSpawn"
 
 export default class GameConfig {
     static init() {
@@ -12,6 +13,7 @@ export default class GameConfig {
 		reg("scripts/AutoMove.js",AutoMove);
 		reg("scripts/RepeatBg.js",RepeatBg);
 		reg("scripts/BirdCtrl.js",BirdCtrl);
+		reg("scripts/ColumnSpawn.js",ColumnSpawn);
     }
 }
 GameConfig.width = 1920;

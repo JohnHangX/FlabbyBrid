@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":26,
-    "selecteID":28,
+    "selectedBox":2,
+    "selecteID":41,
     "searchKey":"Scene",
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
-    "maxID":30,
+    "maxID":42,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -35,7 +35,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite,Bg1",
-            "props":{"y":0,"x":0,"width":2048,"texture":"res/SkyTileSprite.png","name":"Bg1","height":1080},
+            "props":{"zOrder":-2,"y":0,"x":0,"width":2048,"texture":"res/SkyTileSprite.png","name":"Bg1","height":1080},
             "nodeParent":2,
             "label":"Bg1",
             "isOpen":null,
@@ -96,7 +96,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite,Bg2",
-            "props":{"y":0,"x":2048,"width":2048,"texture":"res/SkyTileSprite.png","name":"Bg2","height":1080},
+            "props":{"zOrder":-2,"y":0,"x":2048,"width":2048,"texture":"res/SkyTileSprite.png","name":"Bg2","height":1080},
             "nodeParent":2,
             "label":"Bg2",
             "isOpen":null,
@@ -309,17 +309,16 @@
             "x":15,
             "type":"Animation",
             "searchKey":"Animation,Bird",
-            "props":{"y":392,"x":365,"width":1,"source":"Bird.ani","pivotX":1,"name":"Bird","height":1,"autoPlay":true,"autoAnimation":"Fly"},
+            "props":{"zOrder":1,"y":392,"x":365,"width":1,"source":"Bird.ani","pivotX":1,"name":"Bird","height":1,"autoPlay":true,"autoAnimation":"Idle"},
             "nodeParent":2,
             "label":"Bird",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":26,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -335,7 +334,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -351,7 +349,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/scripts/BirdCtrl.js",
@@ -367,6 +364,82 @@
                     "child":[
                         ]
                 }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite,Top",
+            "props":{"width":2048,"name":"Top","height":1},
+            "nodeParent":2,
+            "label":"Top",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":31,
+            "child":[
+                {
+                    "type":"ChainCollider",
+                    "switchAble":true,
+                    "searchKey":"ChainCollider",
+                    "removeAble":true,
+                    "props":{"points":"0,0,2048,1"},
+                    "nodeParent":31,
+                    "label":"ChainCollider",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":32,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"type":"static"},
+                    "nodeParent":31,
+                    "label":"RigidBody",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":33,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Script",
+            "switchAble":true,
+            "source":"src/scripts/ColumnSpawn.js",
+            "searchKey":"Script,ColumnSpawn",
+            "removeAble":true,
+            "props":{"columnPre":"@Prefab:prefab/Column.prefab"},
+            "nodeParent":2,
+            "label":"ColumnSpawn",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":40,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite,ColumnParent",
+            "props":{"zOrder":-1,"name":"ColumnParent"},
+            "nodeParent":2,
+            "label":"ColumnParent",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":41,
+            "child":[
+                ],
+            "$HIDDEN":false
         }],
     "animations":[
         {
